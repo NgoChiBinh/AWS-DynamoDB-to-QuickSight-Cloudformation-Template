@@ -1,0 +1,22 @@
+version: 1
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 20.10.0
+    commands:
+      - npm install
+  pre_build:
+    commands:
+      - npm run test
+  build:
+    commands:
+      - npm run build
+      - npx cdk synth
+  post_build:
+    commands:
+      - npx cdk deploy --require-approval never
+artifacts:
+  files:
+    - '**/*'
+  base-directory: 'cdk.out'

@@ -1,0 +1,26 @@
+{
+  "app": "npx ts-node --prefer-ts-exts bin/cookies200_backend.ts",  
+  "context": {
+  
+    "adminId":"admin_ncbinh",
+
+    "activityTableName": "ActivityTable_Nuoa",
+    "entityTableName": "EntityTable_Nuoa",
+
+    "catalogName": "AwsDataCatalog",
+    "databaseName": "processed_db",
+    "tableName": "data",
+    "latestPartitionTableName": "latest_partition_data",
+
+    "rlsTableName": "RowLevelSecurity_Nuoa",
+    "rlsDatasetId": "rowlevelsecurity_nuoa",
+
+    "dataSourceBucket": "nuoa-processed-data",
+
+    "dataSourceId": "NuoaEmissionDataSource",
+    "dataSourceName": "Nuoa Emission Data Source",
+
+    "datasetId": "nuoa-joined-dataset",
+    "datasetName": "Nuoa Joined Dataset"
+  }
+}
